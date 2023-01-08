@@ -366,3 +366,137 @@ img {
   color: #eee;
   padding: .5rem 0;
 }
+
+
+/* Login Forma */
+.login .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.login .row .image{
+  flex:1 1 35rem;
+}
+
+.login .row .image img{
+  width:90%;
+}
+
+.login .row form {
+  flex: 1 1 50rem;
+  padding: 2rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+  border-radius: .5rem;
+}
+
+form .field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+form .field.shake {
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    margin-left: 0px;
+  }
+
+  20%,
+  80% {
+    margin-left: -12px;
+  }
+
+  40%,
+  60% {
+    margin-left: 12px;
+  }
+}
+
+form .field .input-area {
+  height: 50px;
+  width: 100%;
+  position: relative;
+}
+
+form input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0 45px;
+  font-size: 18px;
+  background: none;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+  border-bottom-width: 2px;
+  transition: all 0.2s ease;
+}
+
+form .field.shake input,
+form .field.error input {
+  border-color: #dc3545;
+}
+
+.field .input-area i {
+  position: absolute;
+  top: 50%;
+  font-size: 18px;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.input-area .icon {
+  left: 15px;
+  color: #bfbfbf;
+  transition: color 0.2s ease;
+}
+
+.input-area .error-icon {
+  right: 15px;
+  color: #dc3545;
+}
+
+form input:focus~.icon,
+form .field.valid .icon {
+  color: rgb(62, 185, 62);
+}
+
+form .field .error-txt {
+  color: #dc3545;
+  text-align: left;
+  margin-top: 5px;
+}
+
+form .field .error {
+  display: none;
+}
+
+form .field.shake .error,
+form .field.error .error {
+  display: block;
+}
+
+.wrapper a:hover {
+  text-decoration: underline;
+}
+
+form input[type="submit"] {
+  height: 50px;
+  margin-top: 30px;
+  color: #fff;
+  padding: 0;
+  border: none;
+  background: rgb(62, 185, 62);
+  cursor: pointer;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+  background: rgb(110, 229, 54);
+}
