@@ -12,20 +12,9 @@
 
 <body>
     
-    <!-- Fillimi i Header -->
-    <header>
-        <a href="index.html" class="logo"><span>C</span> Virtual</a>
-
-        <nav class="navbar">
-            <a href="index.html">Ballina</a>
-            <a href="turet.html">Turet</a>
-            <a href="sherbimet.html">Sherbimet</a>
-            <a href="liqenet.html">Liqenet</a>
-            <a href="galeria.html">Galeria</a>
-            <a href="login.html">Kyqu</a>
-        </nav>
-    </header>
-    <!-- Mbarimi i Header -->
+    <?php
+        include('includes/header.php');
+    ?>
 
 
     <!-- Fillimi i Galerise  -->
