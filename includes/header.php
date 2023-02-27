@@ -8,7 +8,7 @@
             <a href="sherbimet.php">Sherbimet</a>
             <a href="slider.php">Liqenet</a>
             <a href="galeria.php">Galeria</a>
-            <a href="login.php">Kyqu</a>
+            <a href="register_form.php">Regjistrohu</a>
         </nav>
     </header>
 <!-- Mbarimi i header -->
