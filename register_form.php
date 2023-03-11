@@ -1,7 +1,6 @@
 <?php
 
 include('includes/header.php');
-
 @include 'config.php';
 
 if(isset($_POST['submit'])){
@@ -32,6 +31,7 @@ if(isset($_POST['submit'])){
    }
 
 };
+
 ?>
 
 <!DOCTYPE html>
@@ -72,3 +72,4 @@ if(isset($_POST['submit'])){
 
 </body>
 </html>
+

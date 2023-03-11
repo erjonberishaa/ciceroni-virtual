@@ -542,7 +542,7 @@ form input[type="submit"]:hover {
 }
 
 
-/* Register */
+/* Register & Login*/
 .container {
   min-height: 100vh;
   display: flex;
@@ -664,7 +664,7 @@ form input[type="submit"]:hover {
 }
 
 .form-container form p a {
-  color: crimson;
+  color: rgb(62, 185, 62);
 }
 
 .form-container form .error-msg {
