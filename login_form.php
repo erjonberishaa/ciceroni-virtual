@@ -1,6 +1,6 @@
 <?php
 include('includes/header.php');
-@include 'config.php';
+@include 'includes/config.php';
 
 session_start();
 
@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
       }elseif($row['user_type'] == 'user'){
 
          $_SESSION['user_name'] = $row['name'];
-         header('location:user_page.php');
+         header('location:index.php');
 
       }
      
