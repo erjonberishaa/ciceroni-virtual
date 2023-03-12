@@ -6,7 +6,7 @@
 <html>
 <head>
 	<title>Welcome to the Admin Panel Dashboard! </title>
-	<link rel="stylesheet" href="style_dashboard.css">
+	<link rel="stylesheet" href="style/style_dashboard.css">
 </head>
 <body>
 	<header>
@@ -16,9 +16,9 @@
 	<nav >
 		<ul>
             <li><a href="#">Home</a></li>
-        	<li><a href="#">Dashboard</a></li>
-			<li><a href="#">Users</a></li>
-			<li><a href="#">Logout</a></li>
+        	<li><a href="adminpage.php">Dashboard</a></li>
+			<li><a href="viewregister.php">Users</a></li>
+			<li><a href="index.php">Logout</a></li>
 		</ul>
 	</nav>
 
