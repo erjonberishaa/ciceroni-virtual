@@ -19,6 +19,7 @@
         	<li><a href="adminpage.php">Dashboard</a></li>
 			<li><a href="viewregister.php">Users</a></li>
 			<li><a href="index.php">Logout</a></li>
+			<li><a href="viewdestination.php">Destinations</a></li>
 		</ul>
 	</nav>
 
