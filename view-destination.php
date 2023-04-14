@@ -23,9 +23,23 @@ $result = $conn->query($sql);
 <!DOCTYPE html>
 <html>
 
+<head>
+	<title>Suggested Destinations</title>
+</head>
 <body>
-    <h1>Admin Panel</h1>
-    <a href="logout.php">Logout</a> <!-- Add logout button to log out the admin -->
+	<header>
+		<h1>Suggested Destinations</h1>
+	</header>
+
+	<nav>
+		<ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="adminpage.php">Dashboard</a></li>
+			<li><a href="viewregister.php">Users</a></li>
+			<li><a href="view-destination.php">Destinations</a></li>
+			<li><a href="logout.php">Logout</a></li>
+		</ul>
+	</nav>
     <table>
       <thead>
         <tr>
@@ -37,22 +51,23 @@ $result = $conn->query($sql);
         </tr>
       </thead>
       <tbody>
-        <?php
-          // Display all files in a table
-          if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-              echo "<tr>";
-              echo "<td>".$row['destination_name']."</td>";
-              echo "<td>".$row['price']."</td>";
-              echo "<td>".$row['description']."</td>";
-              echo "<td><img src='images_db/'".$row['image']."' width='100'></td>";
-              echo "<td><a href='edit.php?id=".$row['user_id']."'>Edit</a> | <a href='delete.php?id=".$row['user_id']."' onclick='return confirm(\"Are you sure you want to delete this file?\")'>Delete</a></td>";
-              echo "</tr>";
-            }
-          } else {
-            echo "<tr><td colspan='5'>No files found.</td></tr>";
-          }
-        ?>
+      <?php
+// Display all users in a table
+if ($result->num_rows > 0) {
+  while ($row = $result->fetch_assoc()) {
+    echo "<tr>";
+    echo "<td>".$row['destination_name']."</td>";
+    echo "<td>".$row['price']."</td>";
+    echo "<td>".$row['description']."</td>";
+    echo "<td><img src='images_db/".$row['image']."' width='100'></td>";
+    echo "<td><a href='edit_destination.php?id=".$row['user_id']."'>Edit</a> | <a href='delete_destination.php?id=".$row['user_id']."' onclick='return confirm(\"Are you sure you want to delete this user?\")'>Delete</a></td>";
+    echo "</tr>";
+  }
+} else {
+  echo "<tr><td colspan='5'>No users found.</td></tr>";
+}
+?>
+
       </tbody>
     </table>
   </div>
@@ -67,11 +82,45 @@ $conn->close();
 
 <style>
     body {
-      font-family: Arial, sans-serif;
-      font-size: 16px;
-    }
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+    header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+}
+
+nav {
+	background-color: #eee;
+	border-bottom: 1px solid #ccc;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+}
+
+nav ul li {
+	margin-right: 20px;
+}
+
+nav ul li a {
+	display: block;
+	padding: 10px;
+	color: #333;
+	text-decoration: none;
+}
+
+nav ul li a:hover {
+	background-color: #ccc;
+}
     h1 {
-      text-align: center;
+      text-align: left;
       margin-top: 20px;
     }
     table {

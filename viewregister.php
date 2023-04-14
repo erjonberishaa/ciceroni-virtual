@@ -21,7 +21,8 @@
             <li><a href="#">Home</a></li>
         	<li><a href="adminpage.php">Dashboard</a></li>
 			<li><a href="viewregister.php">Users</a></li>
-			<li><a href="index.php">Logout</a></li>
+			<li><a href="view-destination.php">Destinations</a></li>
+			<li><a href="logout.php">Logout</a></li>
 		</ul>
 	</nav>
 
