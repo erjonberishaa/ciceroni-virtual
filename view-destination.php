@@ -46,7 +46,6 @@ $result = $conn->query($sql);
           <th>Destination Name</th>
           <th>Price</th>
           <th>Description</th>
-          <th>Image</th>
           <th>Action</th>
         </tr>
       </thead>
@@ -59,7 +58,6 @@ if ($result->num_rows > 0) {
     echo "<td>".$row['destination_name']."</td>";
     echo "<td>".$row['price']."</td>";
     echo "<td>".$row['description']."</td>";
-    echo "<td><img src='images_db/".$row['image']."' width='100'></td>";
     echo "<td><a href='edit_destination.php?id=".$row['user_id']."'>Edit</a> | <a href='delete_destination.php?id=".$row['user_id']."' onclick='return confirm(\"Are you sure you want to delete this user?\")'>Delete</a></td>";
     echo "</tr>";
   }
